@@ -25,16 +25,19 @@ with open('color_model.pkl', 'rb') as f:
     feature_names = data_saved['feature_names']
 
 st.title("Color Harmony Analysis")
+st.write("Phân tích sự hài hòa của các tổ hợp màu sắc (3-5 màu) dựa trên lý thuyết màu sắc (Tương đồng, Bổ sung, Tam giác, v.v.).")
+st.write("Analyze the harmony of color combinations (3-5 colors) based on color theory (Analogous, Complementary, Triadic, etc.).")
+st.divider()
 
-num_colors = st.select_slider("Số lượng màu:", options=[3, 4, 5])
+num_colors = st.select_slider("Số lượng màu (Number of colors):", options=[3, 4, 5])
 cols = st.columns(num_colors)
 active_colors = []
 for i in range(num_colors):
     with cols[i]:
-        c = st.color_picker(f"Màu {i+1}", value=["#FF5733", "#FFC300", "#DAF7A6", "#581845", "#900C3F"][i])
+        c = st.color_picker(f"Color {i+1}", value=["#FF5733", "#FFC300", "#DAF7A6", "#581845", "#900C3F"][i])
         active_colors.append(c)
 
-if st.button("Phân tích Palette", type="primary"):
+if st.button("Phân tích (Analyze)", type="primary"):
     # Tạo dictionary chứa dữ liệu
     input_data = {'num_colors': num_colors}
     for i in range(1, 6):
@@ -59,12 +62,15 @@ if st.button("Phân tích Palette", type="primary"):
     st.metric("Harmony Score", f"{score:.2f} / 10")
     
     if score >= 8.5:
-        st.success("Tuyệt đỉnh! Đây là một tổ hợp màu chuẩn mực.")
+        st.success("Tuyệt đỉnh! Đây là một tổ hợp màu chuẩn mực. (Awesome! This is a perfect color combination.)")
         st.balloons()
     elif score >= 7.0:
-        st.info("Rất tốt! Các màu sắc phối hợp khá ăn ý.")
+        st.info("Rất tốt! Các màu sắc phối hợp khá ăn ý. (Very good! The colors complement each other quite well.)")
     else:
-        st.warning("Hơi thiếu hài hòa. Bạn thử thay đổi độ sáng hoặc dùng các màu đối diện trên vòng tròn màu xem sao.")
+        st.warning("Hơi thiếu hài hòa. Bạn thử thay đổi độ sáng hoặc dùng các màu đối diện trên vòng tròn màu xem sao. (A little bit out of balance. Try changing the brightness or using the opposite colors on the color wheel.)")
+
+st.divider()
+st.write("Source code: [ML-color-harmony](https://github.com/chairman-q/ML-color-harmony)")
 
 # venv\Scripts\activate
 # streamlit run app.py

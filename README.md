@@ -1,16 +1,29 @@
-# ML Color Harmony
-A student project for "Machine Learning for Design" module.
+# 🎨 ML Color Harmony
+A student project for an assignment for "Machine Learning for Design" module.
+*Note: The language is set in English and Vietnamese.*
 
-## Introduction
-The application uses **Random Forest Regressor** algorithm to predict the harmony of color combinations (3-5 colors) based on color theory (Analogous, Complementary, Triadic...). This project aims to support designers in choosing color palettes more effectively.
+## 📌 Introduction
+The application uses **Random Forest Regressor** algorithm to predict the harmony of color combinations (3-5 colors) based on color theory (Analogous, Complementary, Triadic, etc.). This project aims to support designers in choosing color palettes more effectively.
 
-## Features
-- Select colors intuitively using the Color Picker.
+## 🚀 Features
+- Select colors intuitively using the color picker.
 - Analyze light/dark contrast.
-- Predict harmony score on a 10-point scale.
+- Predict harmony score on a scale of 10.
 
-## Installing & Running the Application
-1. Clone the repository: `git clone https://github.com/chairman-q/ML4D-color-harmony.git`
-2. Create a virtual environment: `python -m venv venv`
-3. Install the library: `pip install -r requirements.txt`
-4. Run the app: `streamlit run app.py`
+## 📦 Installing & Running
+1. Clone the repository:
+```
+git clone https://github.com/chairman-q/ML-color-harmony.git
+```
+2. Create a virtual environment:
+```
+python -m venv venv
+```
+3. Install the library:
+```
+pip install -r requirements.txt
+```
+4. Run the app:
+```
+streamlit run app.py
+```

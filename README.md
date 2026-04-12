@@ -40,3 +40,6 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+## 🌐 Deployment
+
+This application is being deployed at [mlcolorharmony.streamlit.app](https://mlcolorharmony.streamlit.app/).

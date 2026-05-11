@@ -1,4 +1,6 @@
-# 🎨 ML Color Harmony Scoring System
+# 🎨 ML Color Harmony Scoring System (DEPRECATED)
+
+![Version](https://img.shields.io/badge/Version-0.4-blue.svg) ![ReleaseType](https://img.shields.io/badge/Alpha-orange.svg) ![Status](https://img.shields.io/badge/Status-Deprecated-red.svg)
 
 A student project as an assignment for "Machine Learning for Design" module that analyzes how harmonious a color palette is using **XGBoost expert models**.
 
